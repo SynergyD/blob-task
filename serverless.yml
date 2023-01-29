@@ -1,0 +1,16 @@
+org: synergyd
+app: recogniser
+service: recogniser
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.9
+
+functions:
+  create:
+    handler: src/functions/get.blobs
+    events:
+      - httpApi:
+          path: blobs/{id}
+          method: get
