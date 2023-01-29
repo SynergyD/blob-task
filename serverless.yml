@@ -12,5 +12,5 @@ functions:
     handler: src/functions/get.blobs
     events:
       - httpApi:
-          path: blobs/{id}
+          path: /blobs/{id}
           method: get
